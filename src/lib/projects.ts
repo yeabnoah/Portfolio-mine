@@ -145,13 +145,13 @@ export const projects: Project[] = [
 		]
 	},
 	{
-		name: 'Maven ( ai powered note taking mobile app )',
+		name: 'Maven ( a simple real time socket app )',
 		description:
 			'Maven is a simple real time messaging app built with express, socket io, Nextjs, postgresql, prisma and better auth ',
-		githubLink: 'https://github.com/yeabnoah/Hope-ai-powered-note-taking-app-',
-		liveLink: 'https://github.com/yeabnoah/Hope-ai-powered-note-taking-app-',
+		githubLink: 'https://github.com/yeabnoah/Maven',
+		liveLink: 'https://github.com/yeabnoah/Maven',
 		loading: 'eager',
-		alias: 'hope',
+		alias: 'maven',
 		image: 'https://yeabsra-ashebir.vercel.app/_next/image?url=%2Fframe.png&w=640&q=75',
 		techUsed: [
 			{ name: 'Typescript', icon: 'typescript' },
@@ -167,10 +167,10 @@ export const projects: Project[] = [
 		name: 'sonar ( ai agent )',
 		description:
 			'sonar is an ai agent project which i built for an ai company trial assignment its a personal assistant ai agent , built with Typescript, Nextjs, GCP, google vertext,  ',
-		githubLink: 'https://github.com/yeabnoah/SuggestMeAman',
-		liveLink: 'https://suggestmeaman.vercel.app/',
+		githubLink: 'https://github.com/yeabnoah/sonar',
+		liveLink: 'https://github.com/yeabnoah/sonar',
 		loading: 'eager',
-		alias: 'suggest-me-aman',
+		alias: 'sonar',
 		image: 'https://yeabsra-ashebir.vercel.app/_next/image?url=%2Fframe.png&w=640&q=75',
 		techUsed: [
 			{ name: 'Typescript', icon: 'typescript' },
@@ -185,10 +185,10 @@ export const projects: Project[] = [
 		name: 'hackerwoo ( ai powered hackathon assistant )',
 		description:
 			'Hackwooai is your AI-powered assistant for hackathons, helping you ideate, code, and present your projects faster and more efficiently. ',
-		githubLink: 'https://github.com/yeabnoah/SuggestMeAman',
-		liveLink: 'https://suggestmeaman.vercel.app/',
+		githubLink: 'https://github.com/yeabnoah/hackerwoo',
+		liveLink: 'https://hackerwoo.vercel.app',
 		loading: 'eager',
-		alias: 'suggest-me-aman',
+		alias: 'hackerwoo',
 		image: 'https://yeabsra-ashebir.vercel.app/_next/image?url=%2Fframe.png&w=640&q=75',
 		techUsed: [
 			{ name: 'Typescript', icon: 'typescript' },
@@ -203,10 +203,10 @@ export const projects: Project[] = [
 		name: 'xplor ( personalized entertainment recommendations app )',
 		description:
 			'Xplor: Personalized entertainment recommendations app built with React Native, Expo, and NativeWind. ',
-		githubLink: 'https://github.com/yeabnoah/SuggestMeAman',
-		liveLink: 'https://suggestmeaman.vercel.app/',
+		githubLink: 'https://github.com/yeabnoah/xplor',
+		liveLink: 'https://github.com/yeabnoah/xplor',
 		loading: 'eager',
-		alias: 'suggest-me-aman',
+		alias: 'xplor',
 		image: 'https://yeabsra-ashebir.vercel.app/_next/image?url=%2Fframe.png&w=640&q=75',
 		techUsed: [
 			{ name: 'Typescript', icon: 'typescript' },
