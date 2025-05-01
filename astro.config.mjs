@@ -1,5 +1,4 @@
 import cloudflare from '@astrojs/cloudflare'
-import db from '@astrojs/db'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
@@ -17,7 +16,6 @@ export default defineConfig({
 		}),
 		mdx(),
 		sitemap(),
-		db(),
 		icon({
 			iconDir: 'src/assets/icons'
 		})
