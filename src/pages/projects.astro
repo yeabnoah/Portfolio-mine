@@ -18,36 +18,36 @@ const mobileProjects = projects.filter((project) =>
 ---
 
 <Layout title="Projects | Yeabsra Ashebir">
-	<div class="space-y-8">
+	<div class="space-y-6 md:space-y-8">
 		<section>
-			<h2 class="mb-4">Web Applications</h2>
-			<div class="space-y-4">
+			<h2 class="mb-3 md:mb-4 text-lg md:text-xl">Web Applications</h2>
+			<div class="space-y-3 md:space-y-4">
 				{
 					webProjects.map((project: Project) => (
-						<div class="p-4 card">
-							<div class="flex justify-between items-start">
-								<div>
-									<h3 class="mb-1">{project.name}</h3>
+						<div class="p-3 md:p-4 card">
+							<div class="flex md:flex-row flex-col md:justify-between md:items-start gap-2 md:gap-4">
+								<div class="space-y-1 md:space-y-2">
+									<h3 class="text-base md:text-lg">{project.name}</h3>
 									<p class="text-muted text-sm">{project.description}</p>
 								</div>
-								<div class="flex gap-2">
+								<div class="flex self-end md:self-start gap-2">
 									{project.githubLink && (
 										<a
 											href={project.githubLink}
 											target="_blank"
 											class="text-muted hover:text-accent"
 										>
-											<Icon name="github" class="w-5 h-5" />
+											<Icon name="github" class="w-4 md:w-5 h-4 md:h-5" />
 										</a>
 									)}
 									{project.liveLink && (
 										<a href={project.liveLink} target="_blank" class="text-muted hover:text-accent">
-											<Icon name="external" class="w-5 h-5" />
+											<Icon name="external" class="w-4 md:w-5 h-4 md:h-5" />
 										</a>
 									)}
 								</div>
 							</div>
-							<div class="flex flex-wrap gap-1 mt-3">
+							<div class="flex flex-wrap gap-1 mt-2 md:mt-3">
 								{project.techUsed.map((tech) => (
 									<Badge name={tech.name} />
 								))}
@@ -61,23 +61,23 @@ const mobileProjects = projects.filter((project) =>
 		{
 			mobileProjects.length > 0 && (
 				<section>
-					<h2 class="mb-4">Mobile Applications</h2>
-					<div class="space-y-4">
+					<h2 class="mb-3 md:mb-4 text-lg md:text-xl">Mobile Applications</h2>
+					<div class="space-y-3 md:space-y-4">
 						{mobileProjects.map((project: Project) => (
-							<div class="p-4 card">
-								<div class="flex justify-between items-start">
-									<div>
-										<h3 class="mb-1">{project.name}</h3>
+							<div class="p-3 md:p-4 card">
+								<div class="flex md:flex-row flex-col md:justify-between md:items-start gap-2 md:gap-4">
+									<div class="space-y-1 md:space-y-2">
+										<h3 class="text-base md:text-lg">{project.name}</h3>
 										<p class="text-muted text-sm">{project.description}</p>
 									</div>
-									<div class="flex gap-2">
+									<div class="flex self-end md:self-start gap-2">
 										{project.githubLink && (
 											<a
 												href={project.githubLink}
 												target="_blank"
 												class="text-muted hover:text-accent"
 											>
-												<Icon name="github" class="w-5 h-5" />
+												<Icon name="github" class="w-4 md:w-5 h-4 md:h-5" />
 											</a>
 										)}
 										{project.liveLink && (
@@ -86,12 +86,12 @@ const mobileProjects = projects.filter((project) =>
 												target="_blank"
 												class="text-muted hover:text-accent"
 											>
-												<Icon name="external" class="w-5 h-5" />
+												<Icon name="external" class="w-4 md:w-5 h-4 md:h-5" />
 											</a>
 										)}
 									</div>
 								</div>
-								<div class="flex flex-wrap gap-1 mt-3">
+								<div class="flex flex-wrap gap-1 mt-2 md:mt-3">
 									{project.techUsed.map((tech) => (
 										<Badge name={tech.name} />
 									))}
@@ -103,6 +103,8 @@ const mobileProjects = projects.filter((project) =>
 			)
 		}
 
-		<a href="https://github.com/yeabnoah" class="block text-right link"> View more projects </a>
+		<a href="https://github.com/yeabnoah" class="block text-sm md:text-base text-right link">
+			View more projects
+		</a>
 	</div>
 </Layout>

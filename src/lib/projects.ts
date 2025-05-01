@@ -2,7 +2,7 @@ import type { Project } from './types'
 
 export const projects: Project[] = [
 	{
-		name: 'Nerdspace ( social networking platform )',
+		name: 'Nerdspace ( social networking platform : my Biggest Project rn )',
 		description:
 			'A social Networking platform for people who like building things and sharing with others. with the functionality of creating posts, comments, likes, and follows. creating projects, posting update for projects, leader board like product hunt and a lot more.',
 		githubLink: 'https://github.com/yeabnoah/Nerdspace_codebase1',
