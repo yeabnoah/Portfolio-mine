@@ -1,0 +1,165 @@
+---
+import { Icon } from 'astro-icon/components'
+import Layout from '../layouts/Layout.astro'
+
+const experiences = [
+  {
+    title: "Mobile Developer",
+    company: "Mnidie",
+    location: "Remote (US Client)",
+    period: "July 2024 - August 2024",
+    description: "Developed an AI-powered habit and mood tracking mobile application, inspired by 'Atomic Habits' principles",
+    responsibilities: [
+      "Built a React Native mobile app for habit and mood tracking",
+      "Integrated AI capabilities for personalized habit recommendations",
+      "Implemented social features for habit sharing and community building",
+      "Created an intuitive UI for tracking daily behaviors and moods",
+      "Developed features based on 'Atomic Habits' methodology"
+    ],
+    technologies: ["React Native", "Expo", "AI Integration", "Node.js", "MongoDB", "TypeScript"]
+  },
+  {
+    title: "Mobile Engineer",
+    company: "MemhirEt",
+    location: "Remote",
+    period: "August 2024 - October 2024",
+    description: "Developed a mobile application for an Ethiopian online education platform targeting high school students",
+    responsibilities: [
+      "Built a cross-platform mobile app using React Native and Expo",
+      "Implemented clean architecture using DDD principles",
+      "Optimized app performance and user experience",
+      "Ensured cross-platform compatibility and responsive design"
+    ],
+    technologies: ["React Native", "Expo", "Zustand", "React Query", "NativeWind", "TypeScript"]
+  },
+  {
+    title: "Fullstack Web and Mobile Developer",
+    company: "Fincraze",
+    location: "Remote (Contract)",
+    period: "May 2024 - July 2024",
+    description: "Developed a comprehensive agent-based secure money transfer system with multiple mobile applications",
+    responsibilities: [
+      "Built backend infrastructure for secure money transfers",
+      "Developed admin dashboard frontend with modern UI",
+      "Created three distinct mobile apps for senders, receivers, and agents",
+      "Deployed and maintained backend infrastructure on VPS"
+    ],
+    technologies: ["React", "Node.js", "React Native", "VPS", "MongoDB", "Express"]
+  },
+  {
+    title: "Personal Project",
+    company: "NerdSpace",
+    location: "Personal Project",
+    period: "January 2018 - Present",
+    description: "A passion project focused on building a social networking platform for techies and creatives",
+    responsibilities: [
+      "Building and maintaining a social networking platform as a side project",
+      "Developing backend infrastructure and mobile application",
+      "Currently migrating codebase from JavaScript to TypeScript",
+      "Using it as a playground for learning new technologies"
+    ],
+    technologies: ["JavaScript", "TypeScript", "React Native", "Node.js", "MongoDB"]
+  },
+  {
+    title: "Full Stack Software Engineer",
+    company: "Upstart Studio",
+    location: "Addis Ababa, Ethiopia",
+    period: "October 2024 - Present",
+    description: "Working on various projects including the agency's landing page, internal tools, and SaaS applications",
+    responsibilities: [
+      "Built and deployed the agency's landing page",
+      "Architected and developed the internal MVP tool",
+      "Currently leading development of a SaaS application for freelancers"
+    ],
+    technologies: ["React", "Node.js", "TypeScript", "Next.js", "PostgreSQL", "AWS"]
+  },
+  {
+    title: "CFO & Mobile Developer",
+    company: "Xplor (Discontinued)",
+    location: "Addis Ababa, Ethiopia",
+    period: "February 2024 - October 2024",
+    description: "Co-founded and developed an event discovery platform MVP for Addis Ababa The startup has been discontinued after successfully building and testing the MVP",
+    responsibilities: [
+      "Co-founded the startup and led technical development",
+      "Developed MVP for event discovery platform",
+      "Managed financial planning and strategy",
+      "Gained valuable experience in startup operations and MVP development"
+    ],
+    technologies: ["React Native", "Node.js", "MongoDB", "AWS"]
+  }
+]
+
+const education = [
+  {
+    degree: "Electrical and Computer Engineering",
+    school: "Addis Ababa University",
+    period: "2022 - Dropped out",
+    // description: "Focusing on software engineering and web development"
+  }
+]
+
+---
+
+<Layout title="Experience | Yeabsra Ashebir">
+  <div class="space-y-6 md:space-y-8">
+    <section>
+      <h2 class="mb-4 font-medium text-lg md:text-xl">Work Experience</h2>
+      <div class="space-y-4">
+        {experiences.map(exp => (
+          <div class="p-3 md:p-4 card">
+            <div class="space-y-2 md:space-y-3">
+              <div class="flex md:flex-row flex-col justify-between md:items-start gap-1 md:gap-4">
+                <div>
+                  <h3 class="font-medium text-base md:text-lg">{exp.title}</h3>
+                  <p class="text-accent text-sm md:text-base">{exp.company}</p>
+                  <p class="text-muted text-xs md:text-sm">{exp.location}</p>
+                </div>
+                <p class="text-muted text-xs md:text-sm whitespace-nowrap">{exp.period}</p>
+              </div>
+              
+              <p class="text-muted text-sm md:text-base">{exp.description}</p>
+              
+              <div class="space-y-2">
+                <p class="font-medium text-sm md:text-base">Key Responsibilities:</p>
+                <ul class="space-y-1 text-muted text-sm md:text-base list-disc list-inside">
+                  {exp.responsibilities.map(resp => (
+                    <li>{resp}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="pt-2">
+                <p class="mb-2 text-muted text-xs md:text-sm">Technologies used:</p>
+                <div class="flex flex-wrap gap-1">
+                  {exp.technologies.map(tech => (
+                    <span class="bg-accent/10 px-2 py-1 rounded-md text-accent text-xs">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mb-4 font-medium text-lg md:text-xl">Education</h2>
+      <div class="space-y-4">
+        {education.map(edu => (
+          <div class="p-3 md:p-4 card">
+            <div class="space-y-2 md:space-y-3">
+              <div class="flex md:flex-row flex-col justify-between md:items-center gap-1 md:gap-4">
+                <div>
+                  <h3 class="font-medium text-base md:text-lg">{edu.degree}</h3>
+                  <p class="text-accent text-sm md:text-base">{edu.school}</p>
+                </div>
+                <p class="text-muted text-xs md:text-sm">{edu.period}</p>
+              </div>
+              {/* <p class="text-muted text-sm md:text-base">{edu.description}</p> */}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout> 
