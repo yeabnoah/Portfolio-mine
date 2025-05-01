@@ -23,7 +23,7 @@ const { Content } = await render(post)
 			<h1 transition:name="post-heading" class="mb-2">
 				{post.data.title}
 			</h1>
-			<div class="text-muted flex items-center gap-3 text-xs">
+			<div class="flex items-center gap-3 text-muted text-xs">
 				<FormattedDate date={post.data.pubDate} />
 				{
 					post.data.updatedDate && (
@@ -34,11 +34,11 @@ const { Content } = await render(post)
 				}
 			</div>
 			<a
-				class="link mt-1 block text-xs"
-				href=`https://amanvarshney.hashnode.dev/${post.id}`
+				class="block mt-1 text-xs link"
+				href=`https://medium.com/@yeabnoah5/${post.id}`
 				target="_blank"
 			>
-				Read on Hashnode →
+				Read on Medium →
 			</a>
 		</div>
 
@@ -47,13 +47,13 @@ const { Content } = await render(post)
 		</div>
 	</article>
 
-	<div class="mt-12 pt-4">
+	<!-- <div class="mt-12 pt-4">
 		<hr />
 		<div class="pt-4">
 			<script
 				is:inline
 				src="https://giscus.app/client.js"
-				data-repo="AmanVarshney01/aman-varshney"
+				data-repo="AmanVarshney01/yeabsra-ashebir"
 				data-repo-id="R_kgDOK2jPEQ"
 				data-category="General"
 				data-category-id="DIC_kwDOK2jPEc4CgTww"
@@ -68,5 +68,5 @@ const { Content } = await render(post)
 				crossorigin="anonymous"
 				async></script>
 		</div>
-	</div>
+	</div> -->
 </Layout>

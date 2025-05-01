@@ -1,6 +1,6 @@
 # Portfolio
 
-![aman-varshney](https://github.com/user-attachments/assets/6aa16e74-bff9-484b-8c65-cf48498f9f35)
+![yeabsra-ashebir](https://github.com/user-attachments/assets/6aa16e74-bff9-484b-8c65-cf48498f9f35)
 
 This is my personal website featuring my projects, blog, and a guestbook.
 

@@ -1,0 +1,108 @@
+---
+import { Icon } from 'astro-icon/components'
+import Badge from '../components/Badge.astro'
+import Layout from '../layouts/Layout.astro'
+import { projects } from '../lib/projects'
+import type { Project } from '../lib/types'
+
+const webProjects = projects.filter(
+	(project) =>
+		!project.techUsed.some((tech) =>
+			['React Native', 'Flutter', 'Expo', 'Dart'].includes(tech.name)
+		)
+)
+
+const mobileProjects = projects.filter((project) =>
+	project.techUsed.some((tech) => ['React Native', 'Flutter', 'Expo', 'Dart'].includes(tech.name))
+)
+---
+
+<Layout title="Projects | Yeabsra Ashebir">
+	<div class="space-y-8">
+		<section>
+			<h2 class="mb-4">Web Applications</h2>
+			<div class="space-y-4">
+				{
+					webProjects.map((project: Project) => (
+						<div class="p-4 card">
+							<div class="flex justify-between items-start">
+								<div>
+									<h3 class="mb-1">{project.name}</h3>
+									<p class="text-muted text-sm">{project.description}</p>
+								</div>
+								<div class="flex gap-2">
+									{project.githubLink && (
+										<a
+											href={project.githubLink}
+											target="_blank"
+											class="text-muted hover:text-accent"
+										>
+											<Icon name="github" class="w-5 h-5" />
+										</a>
+									)}
+									{project.liveLink && (
+										<a href={project.liveLink} target="_blank" class="text-muted hover:text-accent">
+											<Icon name="external" class="w-5 h-5" />
+										</a>
+									)}
+								</div>
+							</div>
+							<div class="flex flex-wrap gap-1 mt-3">
+								{project.techUsed.map((tech) => (
+									<Badge name={tech.name} />
+								))}
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</section>
+
+		{
+			mobileProjects.length > 0 && (
+				<section>
+					<h2 class="mb-4">Mobile Applications</h2>
+					<div class="space-y-4">
+						{mobileProjects.map((project: Project) => (
+							<div class="p-4 card">
+								<div class="flex justify-between items-start">
+									<div>
+										<h3 class="mb-1">{project.name}</h3>
+										<p class="text-muted text-sm">{project.description}</p>
+									</div>
+									<div class="flex gap-2">
+										{project.githubLink && (
+											<a
+												href={project.githubLink}
+												target="_blank"
+												class="text-muted hover:text-accent"
+											>
+												<Icon name="github" class="w-5 h-5" />
+											</a>
+										)}
+										{project.liveLink && (
+											<a
+												href={project.liveLink}
+												target="_blank"
+												class="text-muted hover:text-accent"
+											>
+												<Icon name="external" class="w-5 h-5" />
+											</a>
+										)}
+									</div>
+								</div>
+								<div class="flex flex-wrap gap-1 mt-3">
+									{project.techUsed.map((tech) => (
+										<Badge name={tech.name} />
+									))}
+								</div>
+							</div>
+						))}
+					</div>
+				</section>
+			)
+		}
+
+		<a href="https://github.com/yeabnoah" class="block text-right link"> View more projects </a>
+	</div>
+</Layout>

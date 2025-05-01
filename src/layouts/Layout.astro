@@ -3,6 +3,7 @@ import '@fontsource/geist-mono'
 import { ClientRouter } from 'astro:transitions'
 // import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
+import Navigation from '../components/Navigation.astro'
 import '../styles/global.css'
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 	author?: string
 }
 
-const { title, description = 'Portfolio of Aman Varshney', author = 'Aman Varshney' } = Astro.props
+const { title, description = 'Portfolio of Yeabsra Ashebir', author = 'Yeabsra Ashebir' } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL('/og-image.webp', Astro.url)
 ---
@@ -30,17 +31,18 @@ const socialImageURL = new URL('/og-image.webp', Astro.url)
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:image" content={socialImageURL.href} />
-		<meta property="twitter:title" content="Aman Varshney" />
-		<meta property="twitter:description" content="Portfolio of Aman Varshney" />
+		<meta property="twitter:title" content="Yeabsra Ashebir" />
+		<meta property="twitter:description" content="Portfolio of Yeabsra Ashebir" />
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:image" content={socialImageURL.href} />
 		<meta property="twitter:creator" content="@amanvarshney01" />
-		<meta property="og:site_name" content="Aman Varshney" />
-		<meta property="og:description" content="Portfolio of Aman Varshney" />
+		<meta property="og:site_name" content="Yeabsra Ashebir" />
+		<meta property="og:description" content="Portfolio of Yeabsra Ashebir" />
 		<ClientRouter fallback={'none'} />
 	</head>
 	<body class="min-h-screen">
-		<Header />
+		<Navigation />
+		<!-- <Header /> -->
 		<main>
 			<slot />
 		</main>
